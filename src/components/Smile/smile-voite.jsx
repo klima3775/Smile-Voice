@@ -27,7 +27,7 @@ class EmojiVote extends Component {
     );
     return (
       <div className="Wrapper">
-        <h1>Vote for your favorite emoji</h1>
+        <p class="answer">Vote for your favorite emoji</p>
         {this.state.emoji.map((emoji, index) => (
           <button
             className="smile"
@@ -41,7 +41,9 @@ class EmojiVote extends Component {
           Show Results
         </button>
         {this.state.showResults && (
-          <h2>Winning Emoji: {this.state.emoji[winningIndex]}</h2>
+          <p className="winner">
+            Winning Emoji: {this.state.emoji[winningIndex]}
+          </p>
         )}
       </div>
     );

@@ -1,0 +1,29 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // margin: 0;
+  // padding: 0;
+  height: 100vh;
+  background-color: #f5f5f5;
+  .headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .smile {
+    cursor: pointer;
+    font-size: 40px;
+    margin: 5px;
+  }
+  .showResult {
+    cursor: pointer;
+    font-size: 45px;
+    margin: 5px;
+    h2 {
+    }
+  }
+}

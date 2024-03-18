@@ -1,12 +1,12 @@
-// EmojiVote.jsx
 import React, { Component } from "react";
-
+import "./smile.scss";
 class EmojiVote extends Component {
   constructor(props) {
     super(props);
+    const emoji = ["😬", "🥶", "🙈", "🧠", "🤠"];
     this.state = {
-      emoji: ["😬", "🥶", "🙈", "🧠", "🤠"],
-      votes: new Array(5).fill(0),
+      emoji,
+      votes: new Array(emoji.length).fill(0),
       showResults: false,
     };
   }
@@ -26,14 +26,20 @@ class EmojiVote extends Component {
       Math.max(...this.state.votes)
     );
     return (
-      <div>
+      <div className="Wrapper">
         <h1>Vote for your favorite emoji</h1>
         {this.state.emoji.map((emoji, index) => (
-          <button key={index} onClick={() => this.handleVote(index)}>
+          <button
+            className="smile"
+            key={index}
+            onClick={() => this.handleVote(index)}
+          >
             {emoji} {this.state.votes[index]}
           </button>
         ))}
-        <button onClick={this.toggleResults}>Show Results</button>
+        <button className="showResult" onClick={this.toggleResults}>
+          Show Results
+        </button>
         {this.state.showResults && (
           <h2>Winning Emoji: {this.state.emoji[winningIndex]}</h2>
         )}

@@ -3,7 +3,7 @@ import "./smile.scss";
 class EmojiVote extends Component {
   constructor(props) {
     super(props);
-    const emoji = ["😬", "🥶", "🙈", "🧠", "🤠"];
+    const { emoji } = this.props;
     this.state = {
       emoji,
       votes: new Array(emoji.length).fill(0),
